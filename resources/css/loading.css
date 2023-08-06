@@ -1,0 +1,28 @@
+.pulse {
+  width: 67.2px;
+  height: 67.2px;
+  position: relative;
+}
+
+.pulse:before,
+.pulse:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  inset: 0;
+  background: radial-gradient(circle 11.2px,#ff253b 94%,#0000),
+         repeating-conic-gradient(from -30deg,#0000 0 60deg,#ff253b 61deg 120deg);
+  -webkit-mask: radial-gradient(circle 16.8px,#000 calc(100% - 6.7px),#0000 calc(100% - 5.6px) 94%,#000);
+}
+
+.pulse:after {
+  animation: pulse-jj6jf4md 1s infinite;
+  transform: perspective(336px) translateZ(0px);
+}
+
+@keyframes pulse-jj6jf4md {
+  to {
+     transform: perspective(336px) translateZ(168px);
+     opacity: 0;
+  }
+}

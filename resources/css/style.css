@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Tektur:wght@400;500;700&display=swap");
+:root {
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  color: white;
+}
+
+body {
+  margin: 0;
+  background-color: black;
+  height: 100vh;
+  overflow: hidden;
+  width: 100%;
+}
+
+.loading {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(30, 30, 30, 0.906);
+  width: 100%;
+  height: 100vh;
+}
+
+.bg {
+  position: absolute;
+  opacity: 80%;
+  pointer-events: none;
+  height: 100vh;
+  width: 100vw;
+  z-index: -2;
+}
+
+canvas {
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  flex-direction: column;
+  z-index: 1;
+  background-color: rgba(11, 8, 109, 0.146);
+  align-items: center;
+  justify-content: center;
+}
+
+.container .main div {
+  width: 100%;
+}
+
+.container .main div p {
+  font-weight: 400;
+}
+
+.container .main div div {
+  width: 100%;
+  position: relative;
+}
+
+.container .main div div input {
+  box-sizing: border-box;
+  position: absolute;
+  font-family: "Tektur", cursive;
+  letter-spacing: 1px;
+  outline: none;
+  color: #ededed;
+  font-size: medium;
+  width: 100%;
+  background-color: rgba(128, 128, 128, 0.24);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  backdrop-filter: blur(10px);
+}
+
+.container .main div div input::placeholder {
+  color: green;
+}
+
+.container .main div div .material-symbols-outlined {
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  padding: 10px 20px;
+}
+
+.container .main div div .material-symbols-outlined:active {
+  color: green;
+}
+
+.logo {
+  position: relative;
+}
+
+.logo p {
+  position: absolute;
+  right: 0;
+  margin: 0;
+  transform: translateY(30px);
+}
+
+.logo h1 {
+  color: #ececec;
+  font-family: "Tektur", cursive;
+  font-weight: 600;
+  font-size: 206px;
+  margin: 0;
+  overflow: hidden;
+}
+
+.count-down {
+  z-index: 0;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.matrix {
+  /* Set the position property to absolute */
+  position: absolute;
+  /* Set the top and left properties to 0 */
+  top: 0;
+  left: 0;
+  /* Set the width and height properties to 100% */
+  width: 100%;
+  height: 100%;
+  /* Set the z-index property to -1 */
+  z-index: -1;
+}
+
+/* Style the .matrix span elements */
+.matrix span {
+  /* Set the font color to green */
+  color: green;
+  /* Set the font family to a monospace font */
+  font-family: monospace;
+  /* Set the font size */
+  font-size: 24px;
+  /* Set the opacity property to a random value between 0.2 and 1 */
+  opacity: calc(0.2 + (1 - 0.2) * var(--random));
+  /* Set the animation properties */
+  animation: matrix 5s linear infinite;
+}
+
+/* Define the matrix animation */
+@keyframes matrix {
+  from {
+    transform: translateY(-100%);
+    opacity: calc(0.2 + (1 - 0.2) * var(--random));
+  }
+  to {
+    transform: translateY(100%);
+    opacity: calc(0.2 + (1 - 0.2) * var(--random));
+  }
+}
+
+@media (max-width: 600px) {
+  .logo p {
+    font-size: small;
+    transform: translateY(10px);
+  }
+  .logo h1 {
+    color: #ececec;
+    font-family: "Tektur", cursive;
+    font-weight: 600;
+    font-size: 120px;
+    margin: 0;
+    overflow: hidden;
+  }
+}
