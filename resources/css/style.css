@@ -20,7 +20,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(30, 30, 30, 0.906);
+  background-color: rgba(46, 46, 46, 0.084);
   width: 100%;
   height: 100vh;
 }
@@ -174,7 +174,7 @@ canvas {
     color: #ececec;
     font-family: "Tektur", cursive;
     font-weight: 600;
-    font-size: 120px;
+    font-size: 100px;
     margin: 0;
     overflow: hidden;
   }
