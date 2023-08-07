@@ -29,11 +29,11 @@ key.addEventListener("input", (e) => {
     const parsedData = JSON.parse(decryptedDataString);
 
     charArr = "👍👍👍👍👍👍";
-    let num = 1;
+    let num = 5;
     color = "#00cc00";
     let countDown = setInterval(() => {
       text.textContent = num;
-      document.title = num++;
+      document.title = num--;
     }, 1000);
     localStorage.setItem("data", JSON.stringify(parsedData));
     setTimeout(() => {
